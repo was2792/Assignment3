@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="tictactoe.css">
+<meta charset="utf-8">
+<title>Alex's TicTacToe</title>
+</head>
+<body>
+<h1> Lets Play Tic Tac Toe!</h1>
+
+
+
+   
+
+<div id="boardWrapper">
+
+<div id="boxesWrapper">
+		
+        <input type="text" id="box" class="box1" maxlength="1"/>
+        <input type="text" id="box" class="box2" maxlength="1"/>
+        <input type="text" id="box" class="box3" maxlength="1"/>
+        
+        <input type="text" id="box" class="box4" maxlength="1"/>
+        <input type="text" id="box" class="box5" maxlength="1"/>
+        <input type="text" id="box" class="box6" maxlength="1"/>
+        
+        <input type="text" id="box" class="box7" maxlength="1"/>
+        <input type="text" id="box" class="box8" maxlength="1"/>
+        <input type="text" id="box" class="box9" maxlength="1"/>
+</div>
+
+
+<div id="reset"> Reset Board </div>
+
+
+<div id="button"> </div>
+</div>
+
+
+
+
+</body>
+<script src="jquery-1.11.2.js" type="text/javascript" charset"utf-8"></script>
+
+<script>
+
+
+$(document).ready(function()  {
+	
+	$("input").keyup (function() {
+			
+			if ( $(this).val()=="x" || $(this).val()=="o")  {
+				
+				$(this).css({"color":"#a31e1b"});
+				$(this).attr("readonly","readonly");
+				$("#button").html("");
+				
+			}
+			
+	
+			else if ($ (this).val()!="x" || $(this).val()!="o") {
+				
+				$("#button").html("You must enter a lowercase x or o!");
+				$(this).attr("value","");
+				
+			}
+			
+			if ( $(".box1").val() == "x" && $(".box2").val() == "x" && $(".box3").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box1").css ({"background":"#4faf45"});
+					$(".box2").css ({"background":"#4faf45"});
+					$(".box3").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box4").val() == "x" && $(".box5").val() == "x" && $(".box6").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box4").css ({"background":"#4faf45"});
+					$(".box5").css ({"background":"#4faf45"});
+					$(".box6").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box7").val() == "x" && $(".box8").val() == "x" && $(".box9").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box7").css ({"background":"#4faf45"});
+					$(".box8").css ({"background":"#4faf45"});
+					$(".box9").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box1").val() == "x" && $(".box4").val() == "x" && $(".box7").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box1").css ({"background":"#4faf45"});
+					$(".box4").css ({"background":"#4faf45"});
+					$(".box7").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box2").val() == "x" && $(".box5").val() == "x" && $(".box8").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box2").css ({"background":"#4faf45"});
+					$(".box5").css ({"background":"#4faf45"});
+					$(".box8").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box3").val() == "x" && $(".box6").val() == "x" && $(".box9").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box3").css ({"background":"#4faf45"});
+					$(".box6").css ({"background":"#4faf45"});
+					$(".box9").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box1").val() == "x" && $(".box5").val() == "x" && $(".box9").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box1").css ({"background":"#4faf45"});
+					$(".box5").css ({"background":"#4faf45"});
+					$(".box9").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box3").val() == "x" && $(".box5").val() == "x" && $(".box7").val() == "x")  {
+	
+					$("#button").text("X is the winner!!!");
+					$(".box3").css ({"background":"#4faf45"});
+					$(".box5").css ({"background":"#4faf45"});
+					$(".box7").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box1").val() == "o" && $(".box2").val() == "o" && $(".box3").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box1").css ({"background":"#4faf45"});
+					$(".box2").css ({"background":"#4faf45"});
+					$(".box3").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box4").val() == "o" && $(".box5").val() == "o" && $(".box6").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box4").css ({"background":"#4faf45"});
+					$(".box5").css ({"background":"#4faf45"});
+					$(".box6").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box7").val() == "o" && $(".box8").val() == "o" && $(".box9").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box7").css ({"background":"#4faf45"});
+					$(".box8").css ({"background":"#4faf45"});
+					$(".box9").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box1").val() == "o" && $(".box4").val() == "o" && $(".box7").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box1").css ({"background":"#4faf45"});
+					$(".box4").css ({"background":"#4faf45"});
+					$(".box7").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box2").val() == "o" && $(".box5").val() == "o" && $(".box8").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box1").css ({"background":"#4faf45"});
+					$(".box2").css ({"background":"#4faf45"});
+					$(".box3").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box3").val() == "o" && $(".box6").val() == "o" && $(".box9").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box3").css ({"background":"#4faf45"});
+					$(".box6").css ({"background":"#4faf45"});
+					$(".box9").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box1").val() == "o" && $(".box5").val() == "o" && $(".box9").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box1").css ({"background":"#4faf45"});
+					$(".box5").css ({"background":"#4faf45"});
+					$(".box9").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			if ( $(".box3").val() == "o" && $(".box5").val() == "o" && $(".box7").val() == "o")  {
+	
+					$("#button").text("O is the winner!!!");
+					$(".box3").css ({"background":"#4faf45"});
+					$(".box5").css ({"background":"#4faf45"});
+					$(".box7").css ({"background":"#4faf45"});
+					$("input").attr("readonly","readonly");
+			}
+			
+			
+
+	});
+	
+});
+
+		$("#reset").click(function()  {
+		
+		window.location.assign("tictactoe.html");
+		
+});
+
+
+
+
+
+
+				
+</script>
+
+</html>

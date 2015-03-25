@@ -1,0 +1,28 @@
+body
+{
+background-color:#FF3333;
+}
+
+h1
+{
+text-align:center;
+font-size: 5em;
+position: relative;
+top : 1em;
+color:black;
+}
+
+#tictactoelink
+{
+padding-top: 10em;
+font-size: 2em;
+}
+
+
+span.linkspace
+{
+margin-left: 6em;
+}
+
+
+

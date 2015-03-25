@@ -1,0 +1,65 @@
+<html>
+<head>
+<link href="tictactoeregistration.css" type="text/css" rel="stylesheet">
+<body>
+<h1>CONTACT US!</h1><center>
+<div class="survey">
+
+<form id="commentform">
+First Name:
+<input type="text" id="firstname">
+<br><br>
+Last Name:
+<input type="text" id="lastname">
+<br><br>
+Email Add:
+<input type="text" id="email">
+<br><br>
+<br>
+Please add comments here:<br>
+<textarea rows="5" cols="45" id="comment">
+</textarea>
+<br>
+<br>
+<input type="submit" value="Submit" onClick="commentcheck(); validateemail();"/>
+</form>
+
+
+<script type="text/javascript">
+function submitform()
+{
+document.survey.submit();
+}
+
+function commentcheck()
+{
+var check = document.getElementById("comment").value.trim();
+
+if(check == "")
+{
+alert('You must add a comment!');
+document.getElementById("comment").focus();
+return false
+}
+}
+
+function validateemail() {
+    var mail = document.forms["commentform"]["email"].value;
+    var atpos = mail.indexOf("@");
+    var dotpos = mail.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=mail.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+</div>
+<div class="links">
+
+
+<a class="faqlink" href="welcome.html">Click here to return to the Welcome Page!</a>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+body
+{
+background-color: #FF3333;
+text-align:center;
+}
+
+
+
+p
+{
+font-size:2em;
+}
+
+
+h3
+{
+font-family: freight-sans-pro, sans-serif;
+  font-weight: 900;
+  background-color: #FF333;	
+  color: #202c2d;
+  text-shadow:
+    0 1px #808d93,
+    -1px 0 #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5,
+    -4px 5px #808d93,
+    -5px 4px #cdd2d5,
+    -5px 6px #808d93,
+    -6px 5px #cdd2d5,
+    -6px 7px #808d93,
+    -7px 6px #cdd2d5,
+    -7px 8px #808d93,
+    -8px 7px #cdd2d5;
+    
+    font-size: 50px;
+}
+
+
+#boardWrapper
+{
+width:21.9em;
+margin: 0 auto;
+margin-top:15px;
+position: relative;
+top: 0em;
+
+}
+
+#howtoplay
+{
+position: relative;
+top:2em;
+left: 5em;
+text-align: justify;
+width: 25em;
+}
+
+input
+{
+font-size: 60px;
+text-align: center;
+padding-top: 10px;
+font-family: "Courier New";
+text-transform: uppercase; 
+color: black;
+}
+
+h1
+{
+  font-family: freight-sans-pro, sans-serif;
+  font-weight: 900;
+  background-color: #FF333;	
+  color: #202c2d;
+  text-shadow:
+    0 1px #808d93,
+    -1px 0 #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5,
+    -4px 5px #808d93,
+    -5px 4px #cdd2d5,
+    -5px 6px #808d93,
+    -6px 5px #cdd2d5,
+    -6px 7px #808d93,
+    -7px 6px #cdd2d5,
+    -7px 8px #808d93,
+    -8px 7px #cdd2d5;
+    text-align: center;
+    font-size: 5em;
+  }
+
+#box
+{
+background: white;
+width:1.75em;
+height:1.75em;
+}
+
+#boxesWrapper
+{
+background: black;
+}
+
+.box4, .box5, .box6 
+{
+margin-top: .1em;
+margin-bottom: .1em;
+}
+
+.box7, .box8, .box9
+{
+margin-bottom:.1em;
+}
+
+.box1, .box2, .box3
+{
+margin-top:.1em;
+}
+
+#button 
+{
+background: #FF3333; 
+ 
+padding-top: .5em;
+font-size:3em;
+
+}
+
+#reset
+{
+background: #5c5c5c;
+border: 3px solid black;
+text-align: center;
+font-size: 3em; 
+cursor: pointer;
+margin-top: 1em;
+}
+
+#reset:hover 
+{
+background: #303030;
+}

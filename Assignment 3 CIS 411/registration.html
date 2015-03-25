@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<link href="tictactoeregistration.css" type="text/css" rel="stylesheet">
+<meta charset="utf-8">
+<title>Registration</title>
+</head>
+<h1> Please fill out this registration form!</h1>
+<body><center>
+
+<form action="" method="post" id="register-form" novalidate="novalidate">
+ 
+    <h2>User Registration</h2>
+ 
+    <div id="form-content">
+        <fieldset>
+ 
+            <div class="fieldgroup">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname"/>
+            </div>
+ 
+            <div class="fieldgroup">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname"/>
+            </div>
+ 
+            <div class="fieldgroup">
+                <label for="email">Email</label>
+                <input type="text" name="email"/>
+            </div>
+ 
+            <div class="fieldgroup">
+                <label for="password">Password</label>
+                <input type="password" name="password"/>
+            </div>
+ 
+            <div class="fieldgroup">
+                <p class="right">By clicking register you agree to our <a target="_blank" href="/policy">policy</a>.</p>
+                <input type="submit" value="Register" class="submit"/>
+            </div>
+ 
+        </fieldset>
+        <a href="welcome.html">Click Here to return to the Welcome Page!</a>
+    </div>
+ 
+        <div class="fieldgroup">
+            <p>Already registered? <a href="/login">Sign in</a>.</p>
+        </div>
+</form>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function()
+{
+    var JQUERY4U = {};
+ 
+    JQUERY4U.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#register-form").validate({
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    email: "Please enter a valid email address",
+                    agree: "Please accept our policy"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+ 
+    
+    $(D).ready(function($) {
+        JQUERY4U.UTIL.setupFormValidation();
+    });
+ 
+})(jQuery, window, document);
+</script>
+
+</body>
+
+</html>
